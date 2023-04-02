@@ -1,0 +1,42 @@
+{
+    "name": "nawarian/hackerrank",
+    "type": "project",
+    "license": "GPL-3.0",
+    "autoload": {
+        "psr-4": {
+            "Nawarian\\Hackerrank\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nawarian\\Hackerrank\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nawarian",
+            "email": "nickolas@phpsp.org.br"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "friendsofphp/php-cs-fixer": "^3.15",
+        "vimeo/psalm": "^5.9",
+        "captainhook/captainhook": "^5.16",
+        "captainhook/plugin-composer": "^5.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "captainhook/plugin-composer": true
+        }
+    },
+    "scripts": {
+        "format": "php-cs-fixer fix --allow-risky=yes",
+        "tests": "phpunit -c phpunit.xml",
+        "psalm": "psalm",
+        "checks": ["@format", "@psalm", "@tests"]
+    }
+}
