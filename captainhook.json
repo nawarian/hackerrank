@@ -19,6 +19,10 @@
         "enabled": true,
         "actions": [
             {
+                "action": "\\CaptainHook\\App\\Hook\\PHP\\Action\\Linting",
+                "options": []
+            },
+            {
                 "action": "./vendor/bin/psalm"
             },
             {
